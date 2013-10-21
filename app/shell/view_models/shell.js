@@ -4,23 +4,23 @@ define(['plugins/router'], function (router) {
         activate: function () {
             return router.map([
                 {route: ['', 'home'],
-                 moduleId: 'hello/index',
+                 moduleId: 'hello/view_models/hello',
                  title: 'Hello World',
                  nav: true },
                 {route: 'view-composition',
-                 moduleId: 'compose_views/index',
+                 moduleId: 'compose_views/view_models/index',
                  title: 'View Composition',
                  nav: true },
                 {route: 'modal',
-                 moduleId: 'modal/index',
+                 moduleId: 'modal/view_models/index',
                  title: 'Modal Dialogs',
                  nav: true },
                 {route: 'activators',
-                 moduleId: 'activators/index',
+                 moduleId: 'activators/view_models/index',
                  title: 'Activators',
                  nav: true},
                 {route: 'events',
-                 moduleId: 'events/index',
+                 moduleId: 'events/view_models/index',
                  title: 'Events',
                  nav: true}
             ]).buildNavigationModel()

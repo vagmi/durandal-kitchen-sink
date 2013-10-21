@@ -17,7 +17,7 @@ requirejs.config({
     }
 });
 
-define(['durandal/system', 'durandal/app', 'durandal/viewLocator'],  function (system, app, viewLocator) {
+define(['durandal/system', 'durandal/app', './configuration/custom_view_locator'],  function (system, app, viewLocator) {
     //>>excludeStart("build", true);
     system.debug(true);
     //>>excludeEnd("build");
@@ -34,11 +34,8 @@ define(['durandal/system', 'durandal/app', 'durandal/viewLocator'],  function (s
     });
 
     app.start().then(function () {
-        //Replace 'viewmodels' in the moduleId with 'views' to locate the view.
-        //Look for partial views in a 'views' folder in the root.
-        viewLocator.useConvention();
-
+        viewLocator.configureViewLocator();
         //Show the app by setting the root view model for our application.
-        app.setRoot('shell');
+        app.setRoot('shell/view_models/shell');
     });
 });
