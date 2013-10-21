@@ -1,0 +1,9 @@
+{
+  "name":"learndurandal",
+  "version":"0.0.1",
+  "dependencies":{
+    "durandal":"*",
+    "bootstrap":"2.3.2",
+    "lodash":"*"
+  }
+}

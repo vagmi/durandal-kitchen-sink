@@ -1,0 +1,16 @@
+<div>
+    <h2>View Composition</h2>
+    <!--ko compose: 'view1.html'--><!--/ko-->
+    <h2>Model Composition</h2>
+    <label> Show view: <input type="checkbox" data-bind="checked: shouldShowView2"/></label>
+    <div data-bind="visible: shouldShowView2">
+      <!--ko compose: 'view2.html'--><!--/ko-->
+    </div>
+    <!--ko compose: { model:'compose_views/social', mode:'inline'}-->
+    <a data-bind="attr: {href: githubURL}">Github</a>
+    <!--/ko-->
+    <h2>View composition with templates</h2>
+    <!--ko compose: { view:'view2.html', mode:'templated' }-->
+        <div data-part="content">Override content on view 2</div>
+    <!--/ko-->
+</div>

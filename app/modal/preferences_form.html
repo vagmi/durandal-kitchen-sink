@@ -1,0 +1,14 @@
+<div class="messageBox">
+    <div class="modal-header">
+        <h3>Preferences</h3>
+    </div>
+    <div class="modal-body">
+        <form data-bind="submit: ok">
+          <label>Notify me <input type="checkbox" data-bind="checked: shouldNotify"/></label>
+          <input data-bind="visible: shouldNotify, value: email, valueUpdate: 'afterkeydown'"/>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" data-bind="click: ok">Ok</button>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div>
+    <h2>You can now set your preferences</h2>
+    <button class="btn" data-bind="click:setPreferences">Set Preferences</button>
+    <div data-bind="ifnot: preferencesForm.shouldNotify">
+      Click on set preferences to enable notifications
+    </div>
+    <div data-bind="visible: preferencesForm.shouldNotify">
+      <p>Will notify to <span data-bind="text: preferencesForm.email"></span></p>
+    </div>
+</div>
