@@ -2,6 +2,6 @@
     <h1>Tools that I use</h1>
     <label>Select Tool</label>
     <select data-bind="options: tools, optionsText: 'name', value: activeTool"></select>
-    <!--ko compose: activeTool --><!--/ko-->
-    <!-- compose: {view: 'tool', model: activeTool}-->
+    <!--compose: activeTool -->
+    <!-- ko compose: {view: 'views/tool', model: activeTool}--> <!--/ko-->
 </div>

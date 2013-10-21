@@ -1,4 +1,4 @@
-define(['durandal/app', './preferences_form'], function (app, PreferencesForm) {
+define(['./preferences_form'], function (PreferencesForm) {
   var preferencesForm = new PreferencesForm();
   return {
     preferencesForm: preferencesForm,
