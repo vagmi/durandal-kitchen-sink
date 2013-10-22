@@ -1,0 +1,7 @@
+<h2>Showing movies</h2>
+<div data-bind="foreach: movies">
+  <p data-bind="text: title">
+  </p>
+  <span data-bind="myrating: {rating: rating}">&nbsp;</span>
+  <input data-bind="value: rating, valueUpdate: 'afterkeydown'"/>
+</div>

@@ -7,7 +7,8 @@ requirejs.config({
         'knockout': '../lib/knockout.js/knockout',
         'bootstrap': '../lib/bootstrap/js/bootstrap',
         'jquery': '../lib/jquery/jquery',
-        'underscore': '../lib/lodash/dist/lodash'
+        'underscore': '../lib/lodash/dist/lodash',
+        'common': 'common'
     },
     shim: {
         'bootstrap': {
@@ -17,19 +18,19 @@ requirejs.config({
     }
 });
 
-define(['durandal/system', 'durandal/app', './configuration/custom_view_locator'],  function (system, app, viewLocator) {
+define(['durandal/system', 'durandal/app', './configuration/custom_view_locator','plugins/widget'],  function (system, app, viewLocator,widget) {
     //>>excludeStart("build", true);
     system.debug(true);
     //>>excludeEnd("build");
 
     app.title = 'Durandal Kitchen Sink';
-
+    widget.registerKind("myrating");
     //specify which plugins to install and their configuration
     app.configurePlugins({
         router:true,
         dialog: true,
         widget: {
-            kinds: ['rating']
+            kinds: ['myrating']
         }
     });
 

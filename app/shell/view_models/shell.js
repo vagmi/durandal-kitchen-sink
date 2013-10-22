@@ -22,6 +22,10 @@ define(['plugins/router'], function (router) {
                 {route: 'events',
                  moduleId: 'events/view_models/index',
                  title: 'Events',
+                 nav: true},
+                {route: 'movies',
+                 moduleId: 'movies/view_models/index',
+                 title: 'Movies - BH',
                  nav: true}
             ]).buildNavigationModel()
               .mapUnknownRoutes('hello/index', 'not-found')
